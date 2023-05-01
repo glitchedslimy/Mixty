@@ -1,0 +1,43 @@
+{
+  "name": "MixtyBot",
+  "version": "0.1.0",
+  "root": "bot",
+  "sourceRoot": "bot/src",
+  "projectType": "application",
+  "generators": {},
+  "targets": {
+    "dev": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "yarn exec nx run MixtyBot:dev --configuration=development"
+      },
+      "configurations": {
+        "production": {
+          "sourceMap": false,
+          "command": "echo 'Production not ready'"
+        },
+        "development": {
+          "command": "tsx ./bot/src/index.ts | pino-pretty"
+        }
+      }
+    },
+    "build": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "tsc -p ./bot/tsconfig.json"
+      }
+    },
+    "lint": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "eslint \"./bot/src/**/*.{ts,tsx}\" --fix"
+      }
+    },
+    "format": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "prettier --write \"./bot/src/**/*.{ts,tsx,json,md}\""
+      }
+    }
+  }
+}
