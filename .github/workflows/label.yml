@@ -1,4 +1,5 @@
 name: Mixty Labeler
+
 on: [pull_request_target]
 
 jobs:
@@ -9,7 +10,7 @@ jobs:
       pull-requests: write
 
     steps:
-      - uses: actions/labeler@v1
+      - uses: actions/labeler@v4
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           configuration-path: .github/labels/labeler.yml
