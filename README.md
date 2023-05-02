@@ -1,1 +1,1 @@
-![Mixty Github Banner]("assets/banner.png")
+![Mixty Github Banner](assets/banner.png)
