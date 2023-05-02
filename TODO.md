@@ -2,9 +2,7 @@
 
 - Add environments for development or production
 - Add discord.js handler
-- Add CommitLint and Husky
-- Config everything
-- Create github repo
+- Modify ESLINT config to have less errors
 
 # DONE
 
