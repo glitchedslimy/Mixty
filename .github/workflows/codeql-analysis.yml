@@ -2,9 +2,9 @@ name: CodeQL for Mixty
 
 on:
   push:
-    branches: [main, develop]
+    branches: [develop]
   pull_request:
-    branches: [main, develop]
+    branches: [develop]
   schedule:
     - cron: '56 5 * * 1'
   workflow_call:
