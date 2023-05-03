@@ -1,0 +1,51 @@
+---
+name: Bug Report
+description: Create a report to help us improve
+title: '[Bug]: '
+assignees:
+  - reallyslimy
+labels: ['bug', 'triage']
+body:
+- type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: input
+    id: contact
+    attributes:
+      label: How can we contact you if we need futher information?
+      description: 'Example: Discord User: reallyslimy#0001, email: myemail@email.com'
+      validations:
+        required: false
+  - type: textarea
+    id: bug
+    attributes:
+      label: Explain the bug that ocurred.
+      placeholder: 'Examples: This bugged ocurred to me when I tried to execute the command /mixty help'
+      validations:
+        required: true
+  - type: dropdown
+    id: location
+    attributes:
+      label: Where the bug was located?
+      options:
+        - Bot
+        - Website (Docs/Web)
+        - Other
+      validations:
+        required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Any log you want to share with us?
+      description: 'Add any log that was generated when the bug ocurred.'
+      validations:
+        required: false
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
