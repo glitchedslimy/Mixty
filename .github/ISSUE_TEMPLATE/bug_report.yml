@@ -1,46 +1,57 @@
----
 name: Bug Report
-description: Create a report to help us improve
+description: File a bug report
 title: '[Bug]: '
+labels: ['bug', 'triage']
 assignees:
   - reallyslimy
-labels: ['bug', 'triage']
 body:
-- type: markdown
+  - type: markdown
     attributes:
       value: |
         Thanks for taking the time to fill out this bug report!
   - type: input
     id: contact
     attributes:
-      label: How can we contact you if we need futher information?
-      description: 'Example: Discord User: reallyslimy#0001, email: myemail@email.com'
-      validations:
-        required: false
+      label: Contact Details
+      description: How can we get in touch with you if we need more info?
+      placeholder: ex. email@example.com
+    validations:
+      required: false
   - type: textarea
-    id: bug
+    id: what-happened
     attributes:
-      label: Explain the bug that ocurred.
-      placeholder: 'Examples: This bugged ocurred to me when I tried to execute the command /mixty help'
-      validations:
-        required: true
+      label: What happened?
+      description: Also tell us, what did you expect to happen?
+      placeholder: Tell us what you see!
+      value: 'A bug happened!'
+    validations:
+      required: true
   - type: dropdown
     id: location
     attributes:
-      label: Where the bug was located?
+      label: Bug Location
+      description: Where the bug was located?
       options:
         - Bot
-        - Website (Docs/Web)
+        - Web (Docs/Web)
         - Other
-      validations:
-        required: true
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Please provide a step-by-step guide to reproduce the bug.
+      placeholder: ex. 1. Go to https://example.com 2. Click on the button
+      render: shell
+    validations:
+      required: true
   - type: textarea
     id: logs
     attributes:
-      label: Any log you want to share with us?
-      description: 'Add any log that was generated when the bug ocurred.'
-      validations:
-        required: false
+      label: Relevant log output
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      render: shell
   - type: checkboxes
     id: terms
     attributes:
