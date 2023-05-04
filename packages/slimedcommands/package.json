@@ -1,0 +1,9 @@
+{
+  "name": "slimedcommands",
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "src/index.ts",
+  "dependencies": {
+    "fast-glob": "^3.2.12"
+  }
+}

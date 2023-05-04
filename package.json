@@ -39,6 +39,7 @@
     "discord.js": "^14.10.0",
     "fast-glob": "^3.2.12",
     "pino": "^8.11.0",
-    "pino-pretty": "^10.0.0"
+    "pino-pretty": "^10.0.0",
+    "slimedcommands": "workspace:packages/slimedcommands"
   }
 }

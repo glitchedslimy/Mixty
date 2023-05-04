@@ -5257,6 +5257,7 @@ __metadata:
     pino: "npm:^8.11.0"
     pino-pretty: "npm:^10.0.0"
     prettier: "npm:^2.8.8"
+    slimedcommands: "workspace:packages/slimedcommands"
     tsx: "npm:^3.12.7"
     typescript: "npm:*"
   languageName: unknown
@@ -6321,6 +6322,14 @@ __metadata:
   checksum: b88a0f1086e3cd20c8b61f50d8afff5fba83f95167a86432f54387565c9424e5d1970612371f768c128ed4b5b1c427120382bafc8c9edf0b3737eb226b733687
   languageName: node
   linkType: hard
+
+"slimedcommands@workspace:packages/slimedcommands":
+  version: 0.0.0-use.local
+  resolution: "slimedcommands@workspace:packages/slimedcommands"
+  dependencies:
+    fast-glob: "npm:^3.2.12"
+  languageName: unknown
+  linkType: soft
 
 "smart-buffer@npm:^4.2.0":
   version: 4.2.0

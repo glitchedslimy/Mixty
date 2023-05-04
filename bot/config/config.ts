@@ -8,6 +8,12 @@ const convictConfig: convict.Config<BotConfig> = convict({
     default: '',
     env: 'BOT_TOKEN',
   },
+  guildId: {
+    doc: 'The GuildId of the discord server for testing',
+    format: String,
+    default: '',
+    env: 'GUILD_ID',
+  },
 })
 
 convictConfig.validate({ allowed: 'strict' })

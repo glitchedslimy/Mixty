@@ -1,4 +1,5 @@
 import glob from 'fast-glob'
+import { logger } from '../../../../shared/src/utils/logger'
 
 export async function importCommand(path: string) {
   return require(path)
@@ -10,7 +11,7 @@ export async function importEvent(path: string) {
 
 export async function loadFiles(dirPath: string) {
   const files = await glob(
-    `${process.cwd().replace(/\\/g, '/')}/src/${dirPath}/**/*.{js,ts}`
+    `${process.cwd().replace(/\\/g, '/')}/bot/src/${dirPath}/**/*.{js,ts}`
   )
   for (const file of files) {
     delete require.cache[require.resolve(file)]
