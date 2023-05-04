@@ -3968,7 +3968,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-glob@npm:^3.2.9":
+"fast-glob@npm:^3.2.12, fast-glob@npm:^3.2.9":
   version: 3.2.12
   resolution: "fast-glob@npm:3.2.12"
   dependencies:
@@ -5250,6 +5250,7 @@ __metadata:
     eslint: "npm:^8.0.1"
     eslint-config-prettier: "npm:^8.8.0"
     eslint-plugin-prettier: "npm:^4.2.1"
+    fast-glob: "npm:^3.2.12"
     husky: "npm:^8.0.3"
     nx: "npm:16.0.1"
     nx-cloud: "npm:latest"
