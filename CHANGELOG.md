@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [0.1.0] - 2023-05-03
+## [0.1.0] - 2023-05-03 - Project Initialization
 
 ### Added
 
@@ -29,9 +29,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Labeler
 - All the code shares the same node_modules folder
 
-## [Released]
+## [0.1.0] - 04-05-2023 - Project Changes
 
-**None**.
+- Fixed linters
+- Added command handler project to have a NPM package of it
+- Customized eslint config
+- Fixed formatting errors with the command handler package
+- Added new package for the linter to work properly
+
+## [Released]
 
 ## [On Scope]
 
@@ -43,5 +49,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Release Pipeline doesn't work properly
 - Not added any security check pipeline
-- Linter is not working properly
 - Not added any test
