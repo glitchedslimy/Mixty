@@ -1,5 +1,5 @@
 {
-  "name": "Slimed Commands",
+  "name": "SlimedCommands",
   "version": "0.1.0",
   "root": "slimecommands",
   "description": "A command handler made custom for Mixty",
@@ -22,7 +22,7 @@
     "format": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "prettier --write \"slimecommands/src/**/*.ts\""
+        "command": "prettier --write \"./packages/**/src/**/*.{ts,tsx,json,md}\""
       }
     }
   }
