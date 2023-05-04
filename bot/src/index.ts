@@ -8,4 +8,4 @@ client.once(Events.ClientReady, () => {
   logger.info('Bot is ready!')
 })
 
-client.login(config.get('token'))
+client.login(config.token)
