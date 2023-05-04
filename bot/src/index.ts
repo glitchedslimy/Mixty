@@ -8,5 +8,4 @@ client.once(Events.ClientReady, () => {
   logger.info('Bot is ready!')
 })
 
-// Client login with token from config on discord
-client.login(config.get('token'))
+client.login(config.token)

@@ -1,6 +1,6 @@
 {
   "name": "MixtyBot",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "root": "bot",
   "sourceRoot": "bot/src",
   "projectType": "application",
@@ -30,7 +30,7 @@
     "lint": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "eslint \"./bot/src/**/*.{ts,tsx}\" --fix"
+        "command": "eslint --fix"
       }
     },
     "format": {
