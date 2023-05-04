@@ -12,8 +12,11 @@
   "devDependencies": {
     "@commitlint/cli": "^17.6.1",
     "@commitlint/config-conventional": "^17.6.1",
+    "@nrwl/eslint-plugin-nx": "^16.0.3",
     "@types/convict": "^6.1.1",
     "@types/pino": "^7.0.5",
+    "@typescript-eslint/eslint-plugin": "^5.59.2",
+    "@typescript-eslint/parser": "^5.59.2",
     "dotenv": "^16.0.3",
     "eslint": "^8.0.1",
     "eslint-config-prettier": "^8.8.0",
@@ -28,7 +31,8 @@
   "workspaces": [
     "bot/*",
     "web/*",
-    "shared/*"
+    "shared/*",
+    "packages/*"
   ],
   "dependencies": {
     "convict": "^6.2.4",

@@ -1,15 +1,16 @@
-import convict from "convict";
-import { BotConfig } from "./config.interface";
+import convict from 'convict'
+import { BotConfig } from './config.interface'
 
-const config = convict<BotConfig>({
+const convictConfig: convict.Config<BotConfig> = convict({
   token: {
-    doc: "The token of the bot",
+    doc: 'The token of the bot',
     format: String,
-    default: "",
-    env: "BOT_TOKEN",
+    default: '',
+    env: 'BOT_TOKEN',
   },
-});
+})
 
-config.validate({ allowed: "strict" });
+convictConfig.validate({ allowed: 'strict' })
+const config: BotConfig = convictConfig.getProperties()
 
-export default config;
+export default config
