@@ -1,9 +1,11 @@
-import { CommandInteraction } from 'discord.js'
+import { Command } from 'bot/src/types/command/command'
 
-module.exports = {
+const ping: Command = {
   name: 'ping',
   description: 'Ping!',
-  run: async ({ interaction }: { interaction: CommandInteraction }) => {
+  run: async ({ interaction }) => {
     await interaction.reply('Pong!')
   },
 }
+
+module.exports = ping

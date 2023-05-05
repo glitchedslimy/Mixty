@@ -1,5 +1,4 @@
 import glob from 'fast-glob'
-import { logger } from '../../../../shared/src/utils/logger'
 
 export async function importCommand(path: string) {
   return require(path)
