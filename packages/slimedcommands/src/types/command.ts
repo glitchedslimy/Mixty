@@ -20,7 +20,7 @@ interface RunOptions {
 type RunFunction = (options: RunOptions) => any
 
 export type CommandType = {
-  permissions?: PermissionResolvable
+  permissions?: PermissionResolvable[]
   cooldown?: number
   run: RunFunction
   developer: boolean
