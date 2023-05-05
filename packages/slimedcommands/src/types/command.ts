@@ -1,5 +1,6 @@
 import {
   ChatInputApplicationCommandData,
+  Collection,
   CommandInteraction,
   CommandInteractionOptionResolver,
   GuildMember,

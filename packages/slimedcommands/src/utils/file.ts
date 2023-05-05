@@ -30,10 +30,14 @@ export async function loadEvents(client: any) {
 export async function loadCommands(client: SlimedClient) {
   logger.info('📦 Loading commands...')
   await client.commands.clear()
+  await client.subCommands.clear()
   const slashCommands: any[] = []
   const commandFiles = await loadFiles('commands')
   commandFiles.forEach((file) => {
     const command = require(file)
+    if (command.subCommand) {
+      return client.subCommands.set(command.subCommand, command)
+    }
     if (!command.name) {
       return
     }

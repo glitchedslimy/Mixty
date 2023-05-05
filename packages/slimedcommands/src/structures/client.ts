@@ -7,6 +7,7 @@ import { BotActivity } from '../utils/interfaces/botActivity'
 export class SlimedClient extends Client {
   botToken: string
   commands: Collection<string, CommandType> = new Collection()
+  subCommands: Collection<string, any> = new Collection()
   events = new Collection()
   guildId?: string
   dbEngine?: string

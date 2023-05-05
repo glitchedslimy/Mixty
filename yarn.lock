@@ -2859,7 +2859,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios@npm:^1.0.0":
+"axios@npm:^1.0.0, axios@npm:^1.4.0":
   version: 1.4.0
   resolution: "axios@npm:1.4.0"
   dependencies:
@@ -5244,6 +5244,7 @@ __metadata:
     "@types/pino": "npm:^7.0.5"
     "@typescript-eslint/eslint-plugin": "npm:^5.59.2"
     "@typescript-eslint/parser": "npm:^5.59.2"
+    axios: "npm:^1.4.0"
     convict: "npm:^6.2.4"
     discord.js: "npm:^14.10.0"
     dotenv: "npm:^16.0.3"
