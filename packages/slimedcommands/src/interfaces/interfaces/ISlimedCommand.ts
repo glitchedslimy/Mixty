@@ -14,7 +14,7 @@ export interface ISlimedCommand {
   options?: ApplicationCommandOption[]
   cooldown?: number
   developer?: boolean
-  run: ({
+  run?: ({
     client,
     interaction,
     args,

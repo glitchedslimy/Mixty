@@ -13,7 +13,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added the first command: `ping`
 - Added events needed
 
-## [0.1.2] - 2023-05-03 - Commands
+## [0.2.0] - 2023-05-06 - Refactoring (Major change)
 
-- Added the `ping` command
-- Added the `interactionCreate` event
+- Refactored the Command Handler
+- Made new structure
+- Now the events can be internal or external in case the user needs to use them externally. (You need to do the interactionCreate externally if you want to use it externally).
+- Possibility to handle subcommand in separate files.
+- Made the project more maintanable and scalable

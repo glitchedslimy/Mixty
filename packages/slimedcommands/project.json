@@ -1,6 +1,6 @@
 {
   "name": "SlimedCommands",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "root": "slimecommands",
   "description": "A command handler made custom for Mixty",
   "sourceRoot": "slimmedcommands/src",

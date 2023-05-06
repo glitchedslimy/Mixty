@@ -37,6 +37,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fixed formatting errors with the command handler package
 - Added new package for the linter to work properly
 
+## [0.1.1] - 05-05-2023 - Project Changes
+
+- Now the events can be handler internally by the command handler
+- Exposed functions from the handler to the bot in order to make commands more easily
+- SubCommand Handling in separate functions
+- Path aliasing
+
 ## [Released]
 
 ## [On Scope]
