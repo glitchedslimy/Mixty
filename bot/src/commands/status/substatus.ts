@@ -3,8 +3,9 @@ import {
   StringSelectMenuBuilder,
   StringSelectMenuOptionBuilder,
 } from 'discord.js'
+import { ISlimedSubCommand } from 'slimedcommands'
 
-const substatusCommand = {
+const substatusCommand: ISlimedSubCommand = {
   subCommand: 'status.substatus',
   run: async ({ interaction, client }: { interaction: any; client: any }) => {
     const select = new StringSelectMenuBuilder()

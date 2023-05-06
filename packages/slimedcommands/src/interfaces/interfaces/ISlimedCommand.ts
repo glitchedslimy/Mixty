@@ -4,24 +4,23 @@ import {
   CommandInteractionOptionResolver,
   PermissionResolvable,
 } from 'discord.js'
-import { SlimedClient } from 'slimedcommands'
+import { SlimedClient } from '../../structures'
 
-export interface Command {
+export interface ISlimedCommand {
   name: string
   description: string
-  hasSubcommand?: boolean
   permissions?: PermissionResolvable[]
   defaultMemberPermissions?: PermissionResolvable[]
   options?: ApplicationCommandOption[]
   cooldown?: number
   developer?: boolean
   run: ({
+    client,
     interaction,
     args,
-    client,
   }: {
+    client: SlimedClient
     interaction: CommandInteraction
     args?: CommandInteractionOptionResolver
-    client: SlimedClient
   }) => Promise<void>
 }

@@ -1,7 +1,6 @@
-import { Command } from 'bot/src/types/command/command'
 import { ApplicationCommandOptionType, PermissionFlagsBits } from 'discord.js'
-import { loadCommands } from 'slimedcommands'
-const reload: Command = {
+import { ISlimedCommand, loadCommands } from 'slimedcommands'
+const reload: ISlimedCommand = {
   name: 'reload',
   description: 'Reloads all commands and events',
   defaultMemberPermissions: [PermissionFlagsBits.Administrator],

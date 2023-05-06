@@ -5,4 +5,12 @@ export class SlimedEvent<Key extends keyof ClientEvents> {
     public event: Key,
     public run: (...args: ClientEvents[Key]) => any
   ) {}
+
+  public get eventName(): string {
+    return this.event
+  }
+
+  public get listener(): (...args: ClientEvents[Key]) => any {
+    return this.run
+  }
 }

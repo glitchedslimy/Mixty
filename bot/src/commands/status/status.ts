@@ -1,11 +1,10 @@
 import { getDiscordStatus } from '../../calls/discordstatus/getDiscordStatus'
-import { Command } from '../../types/command/command'
-import { logger } from '../../../../shared/src/utils/logger'
 import { EmbedBuilder } from '@discordjs/builders'
-import { capitalizeFirstLetter } from '../../../../shared/src/utils/capitalize'
-import { transFormToHumanDate } from '../../../../shared/src/utils/transformDate'
+import { capitalizeFirstLetter, transFormToHumanDate } from '@shared/utils'
 import { ApplicationCommandOptionType } from 'discord.js'
-const status: Command = {
+import { ISlimedCommand } from 'slimedcommands'
+
+const status: ISlimedCommand = {
   name: 'status',
   description:
     'Shows the status of discord and if it has been any outages recently.',
@@ -18,7 +17,6 @@ const status: Command = {
   ],
   run: async ({ interaction }) => {
     const req = await getDiscordStatus()
-    logger.info(req)
     const embed = new EmbedBuilder()
       .setColor(
         req.components.api.status === 'operational' ? 0x1ee52a : 0xe51e1e

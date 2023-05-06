@@ -1,6 +1,6 @@
 import { ActivityType } from 'discord.js'
 
-export interface BotActivity {
+export interface IBotActivity {
   type:
     | ActivityType.Playing
     | ActivityType.Streaming

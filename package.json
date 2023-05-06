@@ -25,6 +25,7 @@
     "nx": "16.0.1",
     "nx-cloud": "latest",
     "prettier": "^2.8.8",
+    "tsc-alias": "^1.8.6",
     "tsx": "^3.12.7",
     "typescript": "*"
   },
@@ -36,11 +37,11 @@
   ],
   "dependencies": {
     "axios": "^1.4.0",
+    "chalk": "^5.2.0",
     "convict": "^6.2.4",
     "discord.js": "^14.10.0",
     "fast-glob": "^3.2.12",
-    "pino": "^8.11.0",
-    "pino-pretty": "^10.0.0",
-    "slimedcommands": "workspace:packages/slimedcommands"
+    "slimedcommands": "workspace:packages/slimedcommands",
+    "winston": "^3.8.2"
   }
 }

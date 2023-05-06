@@ -1,0 +1,7 @@
+export * from './interfaces/IBotActivity'
+export * from './interfaces/IClient'
+export * from './interfaces/ISlimedClient'
+export * from './interfaces/IRunOptions'
+export * from './interfaces/IExtendedInteraction'
+export * from './interfaces/ISlimedCommand'
+export * from './interfaces/ISlimedSubCommand'

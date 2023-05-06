@@ -1,7 +1,6 @@
-import { Command } from 'bot/src/types/command/command'
-import { PermissionsBitField } from 'discord.js'
+import { ISlimedCommand } from 'slimedcommands'
 
-const ping: Command = {
+const ping: ISlimedCommand = {
   name: 'ping',
   description: 'Ping!',
   run: async ({ interaction }) => {

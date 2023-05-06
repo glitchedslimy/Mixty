@@ -1,16 +1,16 @@
-import { client } from '../../index'
 import {
   CommandInteractionOptionResolver,
   ChatInputCommandInteraction,
   StringSelectMenuInteraction,
 } from 'discord.js'
-import { ExtendedInteraction } from 'slimedcommands'
+import { IExtendedInteraction, ISlimedClient } from '../../interfaces'
 
 module.exports = {
   event: 'interactionCreate',
   once: false,
   run: async (
-    interaction: ChatInputCommandInteraction | StringSelectMenuInteraction
+    interaction: ChatInputCommandInteraction | StringSelectMenuInteraction,
+    client: ISlimedClient
   ) => {
     if (interaction.isChatInputCommand()) {
       if (interaction.isCommand()) {
@@ -36,13 +36,13 @@ module.exports = {
           subcommandFile.run({
             args: interaction.options as CommandInteractionOptionResolver,
             client,
-            interaction: interaction as ExtendedInteraction,
+            interaction: interaction as IExtendedInteraction,
           })
         } else {
           command.run({
             args: interaction.options as CommandInteractionOptionResolver,
             client,
-            interaction: interaction as ExtendedInteraction,
+            interaction: interaction as IExtendedInteraction,
           })
         }
       }
