@@ -2,6 +2,7 @@
   "recommendations": [
     "esbenp.prettier-vscode",
     "dbaeumer.vscode-eslint",
-    "nrwl.angular-console"
+    "nrwl.angular-console",
+    "astro-build.astro-vscode"
   ]
 }

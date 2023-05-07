@@ -1,9 +1,11 @@
-import { CommandInteraction } from 'discord.js'
+import { ISlimedCommand } from 'slimedcommands'
 
-module.exports = {
+const ping: ISlimedCommand = {
   name: 'ping',
   description: 'Ping!',
-  run: async ({ interaction }: { interaction: CommandInteraction }) => {
+  run: async ({ interaction }) => {
     await interaction.reply('Pong!')
   },
 }
+
+module.exports = ping

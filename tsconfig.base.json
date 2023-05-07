@@ -12,7 +12,10 @@
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "paths": {
+      "@shared/*": ["shared/src/*"]
+    }
   },
   "exclude": ["node_modules"]
 }
