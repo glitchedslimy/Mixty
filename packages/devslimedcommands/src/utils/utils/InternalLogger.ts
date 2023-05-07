@@ -1,11 +1,11 @@
 import winston from 'winston'
-import chalk from 'chalk'
+import kleur from 'kleur'
 
 const customFormat = winston.format.printf((data) => {
   const { level, message, timestamp, service } = data
-  return `${timestamp} ${chalk.cyan(`[${level}]`)} on ${chalk.yellow(
+  return `${timestamp} ${kleur.cyan(`[${level}]`)} on ${kleur.yellow(
     `[${service}]`
-  )}: ${chalk.white.bold(message)}`
+  )}: ${kleur.white(message)}`
 })
 
 export const Logger = winston.createLogger({

@@ -3,9 +3,9 @@ import {
   ChatInputCommandInteraction,
   StringSelectMenuInteraction,
 } from 'discord.js'
-import { IExtendedInteraction, ISlimedClient } from '../../interfaces'
+import { IExtendedInteraction, ISlimedClient, IEvent } from '../../interfaces'
 
-module.exports = {
+const interactionCreate: IEvent = {
   event: 'interactionCreate',
   once: false,
   run: async (
@@ -49,3 +49,5 @@ module.exports = {
     }
   },
 }
+
+module.exports = interactionCreate
