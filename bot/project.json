@@ -1,6 +1,6 @@
 {
   "name": "MixtyBot",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "root": "bot",
   "sourceRoot": "bot/src",
   "projectType": "application",
@@ -17,14 +17,14 @@
           "command": "echo 'Production not ready'"
         },
         "development": {
-          "command": "tsx ./bot/src/index.ts | pino-pretty"
+          "command": "tsx --tsconfig ./bot/tsconfig.json ./bot/src/index.ts"
         }
       }
     },
     "build": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "tsc -p ./bot/tsconfig.json"
+        "command": "tsc -p ./bot/tsconfig.json && tsc-alias -p ./bot/tsconfig.json"
       }
     },
     "lint": {

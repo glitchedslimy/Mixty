@@ -25,6 +25,7 @@
     "nx": "16.0.1",
     "nx-cloud": "latest",
     "prettier": "^2.8.8",
+    "tsc-alias": "^1.8.6",
     "tsx": "^3.12.7",
     "typescript": "*"
   },
@@ -32,12 +33,17 @@
     "bot/*",
     "web/*",
     "shared/*",
-    "packages/*"
+    "packages/*",
+    "packages/dist/*"
   ],
   "dependencies": {
+    "axios": "^1.4.0",
     "convict": "^6.2.4",
+    "devslimedcommands": "workspace:packages/devslimedcommands",
     "discord.js": "^14.10.0",
-    "pino": "^8.11.0",
-    "pino-pretty": "^10.0.0"
-  }
+    "fast-glob": "^3.2.12",
+    "kleur": "^4.1.5",
+    "winston": "^3.8.2"
+  },
+  "packageManager": "yarn@3.5.1"
 }

@@ -1,11 +1,26 @@
+import { SlimedClient } from 'slimedcommands'
 import config from '../config/config'
-import { logger } from '../../shared/src/utils/logger'
-import { Client, GatewayIntentBits, Events } from 'discord.js'
+import { ActivityType, Partials } from 'discord.js'
 
-const client = new Client({ intents: [GatewayIntentBits.Guilds] })
-
-client.once(Events.ClientReady, () => {
-  logger.info('Bot is ready!')
+export const client = new SlimedClient({
+  token: config.token,
+  botOptions: {
+    intents: [3276799],
+    partials: [
+      Partials.Channel,
+      Partials.GuildMember,
+      Partials.GuildScheduledEvent,
+      Partials.Message,
+      Partials.Reaction,
+      Partials.User,
+      Partials.ThreadMember,
+    ],
+  },
+  guildId: config.guildId,
+  activity: {
+    name: 'some good tunes 😎',
+    type: ActivityType.Playing,
+  },
 })
 
-client.login(config.token)
+client.start()
